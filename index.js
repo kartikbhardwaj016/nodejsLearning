@@ -5,6 +5,8 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded())
+
+
 app.post('/path', async(req,res,next)=>{
   const data = await func();
   res.send(data);
@@ -22,6 +24,12 @@ console.log(req.body);
 console.log(req.ip);
 console.log(req);
 });
+
+
+
+
+
+
 const func = ()=>{
   return new Promise((resolve,reject)=>{
     setTimeout(()=>{
